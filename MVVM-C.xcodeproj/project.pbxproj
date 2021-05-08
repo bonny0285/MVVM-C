@@ -31,6 +31,10 @@
 		B44359362642982D006DC1AA /* NaplesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44359352642982D006DC1AA /* NaplesViewModel.swift */; };
 		B44359392642AAA0006DC1AA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44359382642AAA0006DC1AA /* BaseViewModel.swift */; };
 		B443593B2642AAAC006DC1AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443593A2642AAAC006DC1AA /* BaseViewController.swift */; };
+		B4C5C88A2646CFF400D22C0A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C5C8892646CFF400D22C0A /* Login.storyboard */; };
+		B4C5C88F2646D04E00D22C0A /* LoginVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C88E2646D04E00D22C0A /* LoginVIewController.swift */; };
+		B4C5C8912646D09800D22C0A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8902646D09800D22C0A /* RegistrationViewController.swift */; };
+		B4C5C8932646D0CE00D22C0A /* RecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8922646D0CE00D22C0A /* RecoveryPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		B44359352642982D006DC1AA /* NaplesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaplesViewModel.swift; sourceTree = "<group>"; };
 		B44359382642AAA0006DC1AA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B443593A2642AAAC006DC1AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B4C5C8892646CFF400D22C0A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B4C5C88E2646D04E00D22C0A /* LoginVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
+		B4C5C8902646D09800D22C0A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		B4C5C8922646D0CE00D22C0A /* RecoveryPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,10 @@
 				B44359142642803C006DC1AA /* AppCoordinator.swift */,
 				B44358FA26427EBA006DC1AA /* SceneDelegate.swift */,
 				B44358F826427EBA006DC1AA /* AppDelegate.swift */,
+				B4C5C8852646CFBD00D22C0A /* Login */,
+				B4C5C8862646CFCC00D22C0A /* A */,
+				B4C5C8872646CFD200D22C0A /* B */,
+				B4C5C8882646CFD800D22C0A /* C */,
 				B443590D26427FBA006DC1AA /* Airport */,
 				B443590E26427FCB006DC1AA /* Italy */,
 				B443590F26427FED006DC1AA /* UK */,
@@ -217,6 +229,62 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		B4C5C8852646CFBD00D22C0A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5C8892646CFF400D22C0A /* Login.storyboard */,
+				B4C5C88B2646CFFF00D22C0A /* ViewControllers */,
+				B4C5C88C2646D00B00D22C0A /* ViewModel */,
+				B4C5C88D2646D01200D22C0A /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B4C5C8862646CFCC00D22C0A /* A */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = A;
+			sourceTree = "<group>";
+		};
+		B4C5C8872646CFD200D22C0A /* B */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = B;
+			sourceTree = "<group>";
+		};
+		B4C5C8882646CFD800D22C0A /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		B4C5C88B2646CFFF00D22C0A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5C88E2646D04E00D22C0A /* LoginVIewController.swift */,
+				B4C5C8902646D09800D22C0A /* RegistrationViewController.swift */,
+				B4C5C8922646D0CE00D22C0A /* RecoveryPasswordViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4C5C88C2646D00B00D22C0A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B4C5C88D2646D01200D22C0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +344,7 @@
 			files = (
 				B443590526427EBB006DC1AA /* LaunchScreen.storyboard in Resources */,
 				B443590226427EBB006DC1AA /* Assets.xcassets in Resources */,
+				B4C5C88A2646CFF400D22C0A /* Login.storyboard in Resources */,
 				B443592026428CA6006DC1AA /* UK.storyboard in Resources */,
 				B443591E26428C9A006DC1AA /* Italy.storyboard in Resources */,
 				B443590026427EBA006DC1AA /* Main.storyboard in Resources */,
@@ -291,8 +360,10 @@
 			files = (
 				B443592426428CEE006DC1AA /* LondonViewController.swift in Sources */,
 				B443592626428D38006DC1AA /* RomeViewModel.swift in Sources */,
+				B4C5C8932646D0CE00D22C0A /* RecoveryPasswordViewController.swift in Sources */,
 				B443593226429597006DC1AA /* NaplesViewController.swift in Sources */,
 				B443591C264287DE006DC1AA /* AirportViewModel.swift in Sources */,
+				B4C5C88F2646D04E00D22C0A /* LoginVIewController.swift in Sources */,
 				B443593B2642AAAC006DC1AA /* BaseViewController.swift in Sources */,
 				B44359152642803C006DC1AA /* AppCoordinator.swift in Sources */,
 				B44359392642AAA0006DC1AA /* BaseViewModel.swift in Sources */,
@@ -306,6 +377,7 @@
 				B44359132642802B006DC1AA /* Coordinator.swift in Sources */,
 				B44359342642981C006DC1AA /* MilanViewModel.swift in Sources */,
 				B443592226428CC0006DC1AA /* RomeViewController.swift in Sources */,
+				B4C5C8912646D09800D22C0A /* RegistrationViewController.swift in Sources */,
 				B44358F926427EBA006DC1AA /* AppDelegate.swift in Sources */,
 				B44358FB26427EBA006DC1AA /* SceneDelegate.swift in Sources */,
 			);
