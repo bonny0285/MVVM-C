@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4375AD92647284100C57B36 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4375AD82647284100C57B36 /* LoginViewModel.swift */; };
+		B4375ADC2647285400C57B36 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4375ADB2647285400C57B36 /* RegistrationViewModel.swift */; };
+		B4375ADF2647286800C57B36 /* RecoveryPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4375ADE2647286800C57B36 /* RecoveryPasswordViewModel.swift */; };
+		B4375AE22647287800C57B36 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4375AE12647287800C57B36 /* LoginCoordinator.swift */; };
+		B4375AE72647302E00C57B36 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4375AE62647302E00C57B36 /* CustomButton.swift */; };
+		B4375B142647A37E00C57B36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4375B132647A37E00C57B36 /* User.swift */; };
 		B44358F926427EBA006DC1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44358F826427EBA006DC1AA /* AppDelegate.swift */; };
 		B44358FB26427EBA006DC1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44358FA26427EBA006DC1AA /* SceneDelegate.swift */; };
 		B44358FD26427EBA006DC1AA /* AirportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44358FC26427EBA006DC1AA /* AirportViewController.swift */; };
@@ -38,6 +44,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4375AD82647284100C57B36 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B4375ADB2647285400C57B36 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		B4375ADE2647286800C57B36 /* RecoveryPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewModel.swift; sourceTree = "<group>"; };
+		B4375AE12647287800C57B36 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		B4375AE62647302E00C57B36 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B4375B132647A37E00C57B36 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B44358F526427EBA006DC1AA /* MVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44358F826427EBA006DC1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B44358FA26427EBA006DC1AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +93,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4375AD3264727D000C57B36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4375AD82647284100C57B36 /* LoginViewModel.swift */,
+				B4375ADB2647285400C57B36 /* RegistrationViewModel.swift */,
+				B4375ADE2647286800C57B36 /* RecoveryPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B4375B122647A36100C57B36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4375B132647A37E00C57B36 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B44358EC26427EBA006DC1AA = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +255,7 @@
 			children = (
 				B44359382642AAA0006DC1AA /* BaseViewModel.swift */,
 				B443593A2642AAAC006DC1AA /* BaseViewController.swift */,
+				B4375AE62647302E00C57B36 /* CustomButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -233,9 +264,10 @@
 			isa = PBXGroup;
 			children = (
 				B4C5C8892646CFF400D22C0A /* Login.storyboard */,
+				B4375AE12647287800C57B36 /* LoginCoordinator.swift */,
 				B4C5C88B2646CFFF00D22C0A /* ViewControllers */,
-				B4C5C88C2646D00B00D22C0A /* ViewModel */,
-				B4C5C88D2646D01200D22C0A /* Model */,
+				B4375AD3264727D000C57B36 /* ViewModel */,
+				B4375B122647A36100C57B36 /* Model */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -269,20 +301,6 @@
 				B4C5C8922646D0CE00D22C0A /* RecoveryPasswordViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		B4C5C88C2646D00B00D22C0A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B4C5C88D2646D01200D22C0A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,11 +378,15 @@
 			files = (
 				B443592426428CEE006DC1AA /* LondonViewController.swift in Sources */,
 				B443592626428D38006DC1AA /* RomeViewModel.swift in Sources */,
+				B4375AE72647302E00C57B36 /* CustomButton.swift in Sources */,
 				B4C5C8932646D0CE00D22C0A /* RecoveryPasswordViewController.swift in Sources */,
 				B443593226429597006DC1AA /* NaplesViewController.swift in Sources */,
+				B4375AE22647287800C57B36 /* LoginCoordinator.swift in Sources */,
 				B443591C264287DE006DC1AA /* AirportViewModel.swift in Sources */,
 				B4C5C88F2646D04E00D22C0A /* LoginVIewController.swift in Sources */,
+				B4375AD92647284100C57B36 /* LoginViewModel.swift in Sources */,
 				B443593B2642AAAC006DC1AA /* BaseViewController.swift in Sources */,
+				B4375ADF2647286800C57B36 /* RecoveryPasswordViewModel.swift in Sources */,
 				B44359152642803C006DC1AA /* AppCoordinator.swift in Sources */,
 				B44359392642AAA0006DC1AA /* BaseViewModel.swift in Sources */,
 				B443592C26428F0A006DC1AA /* UKCoordinator.swift in Sources */,
@@ -374,8 +396,10 @@
 				B443592826428D5A006DC1AA /* LondonViewModel.swift in Sources */,
 				B44359302642954F006DC1AA /* MilanViewController.swift in Sources */,
 				B44358FD26427EBA006DC1AA /* AirportViewController.swift in Sources */,
+				B4375B142647A37E00C57B36 /* User.swift in Sources */,
 				B44359132642802B006DC1AA /* Coordinator.swift in Sources */,
 				B44359342642981C006DC1AA /* MilanViewModel.swift in Sources */,
+				B4375ADC2647285400C57B36 /* RegistrationViewModel.swift in Sources */,
 				B443592226428CC0006DC1AA /* RomeViewController.swift in Sources */,
 				B4C5C8912646D09800D22C0A /* RegistrationViewController.swift in Sources */,
 				B44358F926427EBA006DC1AA /* AppDelegate.swift in Sources */,
@@ -456,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -511,7 +535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

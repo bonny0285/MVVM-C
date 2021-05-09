@@ -26,9 +26,9 @@ class AppCoordinator: Coordinator {
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         
-        let airportCoordinator = AirportCoordinator(rootNavigationController: rootViewController)
-        addChildCoordinator(airportCoordinator)
-        airportCoordinator.start(allowsReturnToPreviousCoordinator: allowsReturnToPreviousCoordinator)
+        let loginCoordinator = LoginCoordinator(rootNavigationController: rootViewController)
+        addChildCoordinator(loginCoordinator)
+        loginCoordinator.start(allowsReturnToPreviousCoordinator: allowsReturnToPreviousCoordinator)
     }
     
     override func finish() {}

@@ -9,21 +9,35 @@ import UIKit
 
 class RegistrationViewController: BaseViewController {
 
+    //MARK: - Outlests
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var createAccountButton: CustomButton!
+    
+    //MARK: - Properties
+    
+    var viewModel = RegistrationViewModel()
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "Registration"
+        createAccountButton.isEnabled = false
     }
     
 
-    /*
-    // MARK: - Navigation
+    //MARK: - Methods
+    
+    //MARK: - Actions
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func createAccountWasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.registrationSuccessfully()
     }
-    */
-
+    
+    @IBAction func cancelWasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.moveToLoginFromRegistration()
+    }
+    
 }

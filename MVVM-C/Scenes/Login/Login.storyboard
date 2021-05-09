@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,19 +19,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ZXg-aG-EFM">
                                 <rect key="frame" x="30" y="144" width="354" height="103"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="_username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-fp-FDW">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-fp-FDW">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="_password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKw-12-8J0">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKw-12-8J0">
                                         <rect key="frame" x="0.0" y="69" width="354" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRI-Ft-FA4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRI-Ft-FA4" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                 <rect key="frame" x="100" y="347" width="214" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NAP-2z-biF"/>
@@ -40,8 +42,11 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginWasPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RV7-Ab-CXk"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDQ-I6-qXF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDQ-I6-qXF" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                 <rect key="frame" x="100" y="427" width="214" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="T0S-cf-yk9"/>
@@ -50,6 +55,9 @@
                                 <state key="normal" title="REGISTRATION">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registrationWasPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Xy-6w-ICG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you don't have an account, create on for free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX6-AP-RVb">
                                 <rect key="frame" x="80.5" y="405.5" width="253.5" height="16.5"/>
@@ -57,7 +65,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kY-Dd-45y">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kY-Dd-45y" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                 <rect key="frame" x="100" y="497" width="214" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6B2-UN-Ps4"/>
@@ -66,10 +74,13 @@
                                 <state key="normal" title="RECOVERY PASSWORD">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="recoveryWasPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2hZ-ta-VVG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDQ-I6-qXF" firstAttribute="top" secondItem="JX6-AP-RVb" secondAttribute="bottom" constant="5" id="6aP-86-60B"/>
                             <constraint firstItem="JX6-AP-RVb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7Cx-hl-kMQ"/>
@@ -87,6 +98,10 @@
                             <constraint firstItem="hRI-Ft-FA4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="zt8-Qd-v7O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="fKw-12-8J0" id="6JL-Rw-we4"/>
+                        <outlet property="usernameTextField" destination="UKe-fp-FDW" id="tpc-hj-78W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,19 +118,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="J6o-jZ-JgO">
                                 <rect key="frame" x="30" y="144" width="354" height="103"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="_username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JwC-io-Vcw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JwC-io-Vcw">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="_password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ZB-v1-jyV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ZB-v1-jyV">
                                         <rect key="frame" x="0.0" y="69" width="354" height="34"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CE-5t-b4T">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CE-5t-b4T" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                 <rect key="frame" x="100" y="347" width="214" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="n77-bX-ibx"/>
@@ -124,8 +139,11 @@
                                 <state key="normal" title="CREATE ACCOUNT">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountWasPressed:" destination="QXZ-Os-07p" eventType="touchUpInside" id="Wdh-Iv-5gz"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDC-Ca-1y3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDC-Ca-1y3" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                 <rect key="frame" x="100" y="427" width="214" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7ni-7u-rkE"/>
@@ -134,6 +152,9 @@
                                 <state key="normal" title="CANCEL">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelWasPressed:" destination="QXZ-Os-07p" eventType="touchUpInside" id="45k-dR-Z5u"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JWk-Sm-bCw"/>
@@ -150,6 +171,11 @@
                             <constraint firstItem="JWk-Sm-bCw" firstAttribute="trailing" secondItem="vDC-Ca-1y3" secondAttribute="trailing" constant="100" id="otF-Ar-XLv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="createAccountButton" destination="8CE-5t-b4T" id="GHW-Gq-NFg"/>
+                        <outlet property="passwordTextField" destination="4ZB-v1-jyV" id="70S-hM-YeI"/>
+                        <outlet property="usernameTextField" destination="JwC-io-Vcw" id="Ql2-2b-Pvb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DxH-oD-zZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,7 +189,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="_username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ot-fy-z1w">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ot-fy-z1w">
                                 <rect key="frame" x="30" y="144" width="354" height="34"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -174,7 +200,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiX-2h-Fmh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiX-2h-Fmh" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                 <rect key="frame" x="100" y="278" width="214" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CMw-es-Hxg"/>
@@ -183,6 +209,9 @@
                                 <state key="normal" title="RECOVERY PASSWORD">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="recoveryButtonWasPressed:" destination="72x-z4-V6S" eventType="touchUpInside" id="KlS-yX-g2i"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert your mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng6-fj-p11">
                                 <rect key="frame" x="165" y="231" width="84" height="17"/>
@@ -190,22 +219,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gE5-Cy-d62" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
+                                <rect key="frame" x="100" y="348" width="214" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AEE-wZ-L3U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <state key="normal" title="CANCEL">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonWasPressed:" destination="72x-z4-V6S" eventType="touchUpInside" id="O0g-RC-Exe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qs-RM-Ihd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gE5-Cy-d62" firstAttribute="leading" secondItem="4qs-RM-Ihd" secondAttribute="leading" constant="100" id="7uO-9Z-SNh"/>
                             <constraint firstItem="MiX-2h-Fmh" firstAttribute="top" secondItem="ng6-fj-p11" secondAttribute="bottom" constant="30" id="8mz-nM-ADO"/>
                             <constraint firstItem="4qs-RM-Ihd" firstAttribute="trailing" secondItem="1Ot-fy-z1w" secondAttribute="trailing" constant="30" id="Hw2-AU-ILS"/>
                             <constraint firstItem="MiX-2h-Fmh" firstAttribute="leading" secondItem="4qs-RM-Ihd" secondAttribute="leading" constant="100" id="ISe-Jh-fKh"/>
                             <constraint firstItem="MiX-2h-Fmh" firstAttribute="top" secondItem="1Ot-fy-z1w" secondAttribute="bottom" constant="100" id="VRd-f0-hmW"/>
                             <constraint firstItem="1Ot-fy-z1w" firstAttribute="top" secondItem="SVm-fM-vSt" secondAttribute="bottom" constant="5" id="Xpf-vJ-1nB"/>
                             <constraint firstItem="SVm-fM-vSt" firstAttribute="leading" secondItem="4qs-RM-Ihd" secondAttribute="leading" constant="30" id="eqT-mr-cOM"/>
+                            <constraint firstItem="gE5-Cy-d62" firstAttribute="top" secondItem="MiX-2h-Fmh" secondAttribute="bottom" constant="30" id="iXR-iT-1hb"/>
                             <constraint firstItem="ng6-fj-p11" firstAttribute="centerX" secondItem="P5r-R0-F0c" secondAttribute="centerX" id="ngv-Dc-O3F"/>
                             <constraint firstItem="4qs-RM-Ihd" firstAttribute="trailing" secondItem="MiX-2h-Fmh" secondAttribute="trailing" constant="100" id="srj-KZ-aiv"/>
                             <constraint firstItem="1Ot-fy-z1w" firstAttribute="top" secondItem="4qs-RM-Ihd" secondAttribute="top" constant="100" id="w7S-Ib-T2U"/>
+                            <constraint firstItem="4qs-RM-Ihd" firstAttribute="trailing" secondItem="gE5-Cy-d62" secondAttribute="trailing" constant="100" id="wwu-Cz-njx"/>
                             <constraint firstItem="1Ot-fy-z1w" firstAttribute="leading" secondItem="4qs-RM-Ihd" secondAttribute="leading" constant="30" id="xWv-sP-BzA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordHintLabel" destination="ng6-fj-p11" id="xIQ-Ua-Hcj"/>
+                        <outlet property="usernameTextField" destination="1Ot-fy-z1w" id="iuO-Jc-TdD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwY-bB-OfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

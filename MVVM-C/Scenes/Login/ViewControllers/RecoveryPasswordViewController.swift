@@ -9,21 +9,32 @@ import UIKit
 
 class RecoveryPasswordViewController: BaseViewController {
 
+    //MARK: - Outlets
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordHintLabel: UILabel!
+    
+    
+    //MARK: - Properties
+    var viewModel = RecoveryPasswordViewModel()
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = "Recovery Password"
+        passwordHintLabel.isHidden = true
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Methods
+    
+    //MARK: - Actions
+    
+    @IBAction func recoveryButtonWasPressed(_ sender: CustomButton) {
     }
-    */
-
+    
+    @IBAction func cancelButtonWasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.moveToLoginFromRecovery()
+    }
+    
 }

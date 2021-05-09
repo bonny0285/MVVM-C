@@ -8,5 +8,36 @@
 import UIKit
 
 class LoginVIewController: BaseViewController {
-
+    
+    //MARK: - Outlets
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    //MARK: - Properties
+    
+    var viewModel = LoginViewModel()
+    
+    //MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Login"
+    }
+    
+    //MARK: - Methods
+    
+    //MARK: - Actions
+    
+    @IBAction func loginWasPressed(_ sender: CustomButton) {
+    }
+    
+    @IBAction func registrationWasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.moveToRegistration()
+    }
+    
+    @IBAction func recoveryWasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.moveToRecoveryPassword()
+    }
+    
 }
