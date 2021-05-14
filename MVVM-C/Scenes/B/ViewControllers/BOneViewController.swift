@@ -11,7 +11,7 @@ class BOneViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       title = "B-1"
+        tabBarController?.tabBarItem.title = "B"
     }
     
 

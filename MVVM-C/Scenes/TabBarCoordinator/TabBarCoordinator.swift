@@ -8,47 +8,83 @@
 import UIKit
 
 class MyCustomTabBarController: UITabBarController {
+  
+    //MARK: - Properties
+
+    var coordinatorA: ACoordinator!
+    var coordinatorB: BCoordinator!
+    var coordinatorC: CCoordinator!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       // setupControllers()
-    }
-    
-    func setupControllers() {
+        let itmes = [
+            UITabBarItem(title: "A", image: nil, tag: 0),
+            UITabBarItem(title: "B", image: nil, tag: 1),
+            UITabBarItem(title: "C", image: nil, tag: 2)
+        ]
+        #warning("Gestire l'aggiunta dei view controller")
+        coordinatorA = ACoordinator(rootNavigationController: viewControllers![0] as! UINavigationController)
+        viewControllers?.append(coordinatorA.returnRootViewController())
+        coordinatorB = BCoordinator(rootNavigationController: viewControllers![1] as! UINavigationController, tabBarController: self)
+        viewControllers?.append(coordinatorB.returnRootViewController())
+        coordinatorC = CCoordinator(rootNavigationController: viewControllers![2] as! UINavigationController)
         
-        viewControllers = [
-            UIStoryboard(name: "A", bundle: Bundle.main).instantiateViewController(identifier: "AOneViewController"),
-            UIStoryboard(name: "B", bundle: Bundle.main).instantiateViewController(identifier: "BOneViewController"),
-            UIStoryboard(name: "C", bundle: Bundle.main).instantiateViewController(identifier: "COneViewController")
+        let controller = [
+            coordinatorA.returnRootViewController(),
+            coordinatorB.returnRootViewController(),
+            coordinatorC.returnRootViewController()
         ]
         
-        for (index, rootVC) in viewControllers!.enumerated() {
-
-            var vc: UIViewController?
-
-            switch index {
-            case 1:
-                vc = UIStoryboard(name: "A", bundle: Bundle.main).instantiateViewController(identifier: "AOneViewController")
-
-
-            case 2:
-                vc = UIStoryboard(name: "B", bundle: Bundle.main).instantiateViewController(identifier: "BOneViewController")
-
-            case 3:
-                vc = UIStoryboard(name: "C", bundle: Bundle.main).instantiateViewController(identifier: "COneViewController")
-
-            default: break
-            }
-
-            if let nav = rootVC as? UINavigationController, let basevc = vc {
-                nav.setViewControllers([basevc], animated: false)
-            }
+        viewControllers = controller
+        
+        for i in 0 ..< itmes.count {
+            viewControllers?[i].tabBarItem = itmes[i]
+        }
+        
+        print(tabBarItem.tag)
+        
+//        let aCoordinator = ACoordinator(rootNavigationController: self.navigationController!)
+//        aCoordinator.start(allowsReturnToPreviousCoordinator: false)
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("ITEM: \(item.tag)")
+        switch item.tag {
+        case 0:
+            coordinatorA.start(allowsReturnToPreviousCoordinator: false)
+            coordinatorA.returnRootViewController().viewModel.delegate = self
+        case 1:
+            coordinatorB.start(allowsReturnToPreviousCoordinator: false)
+        case 2:
+            coordinatorC.start(allowsReturnToPreviousCoordinator: false)
+            
+        default:
+            print("TAG NOT PRESENT")
         }
     }
 }
 
+extension MyCustomTabBarController: AOneViewModelDelegate {
+   func moveToA2ViewController() {
+       coordinatorA.presentA2ViewController(self.navigationController!)
+   }
+   
+   func moveToA3ViewController() {
+       coordinatorA.presentA3ViewController(self.navigationController!)
+   }
+   
+   func moveToB1ViewController() {
+       coordinatorA.presentB1ViewController(self.navigationController!)
+   }
+   
+   func moveToC1ViewController() {
+       coordinatorA.presentC1ViewController(self.navigationController!)
+   }
+}
+
 class TabBarCoordinator: Coordinator {
     
-    let tabBarController = MyCustomTabBarController()
+    let tabBarController: MyCustomTabBarController!
     
     let rootNavigationController: UINavigationController!
 
@@ -56,23 +92,24 @@ class TabBarCoordinator: Coordinator {
     init(rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
         
+        tabBarController = UIStoryboard(name: "TabBar", bundle: Bundle.main).instantiateViewController(identifier: "MyCustomTabBarController")
+        rootNavigationController.isNavigationBarHidden = true
+        rootNavigationController.setViewControllers([tabBarController], animated: true)
+//        let itmes = [
+//            UITabBarItem(title: "A", image: nil, tag: 0),
+//            UITabBarItem(title: "B", image: nil, tag: 1),
+//            UITabBarItem(title: "C", image: nil, tag: 2)
+//        ]
+//
+//        for i in 0 ..< itmes.count {
+//            tabBarController.viewControllers?[i].tabBarItem = itmes[i]
+//        }
     }
     
     override func start(allowsReturnToPreviousCoordinator: Bool) {
-        let tab = UIStoryboard(name: "TabBar", bundle: Bundle.main).instantiateViewController(identifier: "MyCustomTabBarController") as! UITabBarController
-        rootNavigationController.isNavigationBarHidden = true
-        rootNavigationController.setViewControllers([tab], animated: true)
-        let itmes = [
-            UITabBarItem(title: "A", image: nil, tag: 0),
-            UITabBarItem(title: "B", image: nil, tag: 1),
-            UITabBarItem(title: "C", image: nil, tag: 2)
-        ]
-        
-        for i in 0 ..< itmes.count {
-            tab.viewControllers?[i].tabBarItem = itmes[i]
-        }
-        print("TOTAL CONTROLLER: \(tab.viewControllers?.count)")
-        //rootNavigationController.pushViewController(tab, animated: true)
+      
+//        let aCoordinator = ACoordinator(rootNavigationController: rootNavigationController)
+//        aCoordinator.start(allowsReturnToPreviousCoordinator: false)
     }
     
     override func finish() {

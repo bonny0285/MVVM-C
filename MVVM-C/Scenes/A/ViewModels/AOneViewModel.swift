@@ -7,6 +7,13 @@
 
 import UIKit
 
-class AOneViewModel: BaseViewModel {
+protocol AOneViewModelDelegate: AnyObject {
+    func moveToA2ViewController()
+    func moveToA3ViewController()
+    func moveToB1ViewController()
+    func moveToC1ViewController()
+}
 
+class AOneViewModel: BaseViewModel {
+    weak var delegate: AOneViewModelDelegate?
 }

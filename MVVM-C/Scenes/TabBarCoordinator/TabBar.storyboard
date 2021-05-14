@@ -82,9 +82,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="lhz-7F-Boz" kind="relationship" relationship="viewControllers" id="L9C-ZO-QZ7"/>
-                        <segue destination="Yzd-AC-lyF" kind="relationship" relationship="viewControllers" id="F5g-6v-Tyk"/>
-                        <segue destination="scC-VJ-8sJ" kind="relationship" relationship="viewControllers" id="D0r-aN-9td"/>
+                        <segue destination="lhz-7F-Boz" kind="relationship" relationship="viewControllers" id="ACw-UY-lvb"/>
+                        <segue destination="Yzd-AC-lyF" kind="relationship" relationship="viewControllers" id="YtZ-KH-Zyb"/>
+                        <segue destination="scC-VJ-8sJ" kind="relationship" relationship="viewControllers" id="gAZ-3S-6QJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdw-nr-PS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
