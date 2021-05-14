@@ -9,6 +9,8 @@ import UIKit
 
 class LoginCoordinator: Coordinator {
 
+    //MARK: - Properties
+
     let rootNavigationController: UINavigationController!
     
     lazy var loginViewModel: LoginViewModel = {
@@ -31,10 +33,14 @@ class LoginCoordinator: Coordinator {
     
     private(set) var storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
     
+    //MARK: - Lifecycle
+
     init(rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
     }
     
+    //MARK: - Methods
+
     override func start(allowsReturnToPreviousCoordinator: Bool) {
         let loginViewController: LoginVIewController = storyboard.instantiateViewController(identifier: "LoginVIewController")
         loginViewController.viewModel = loginViewModel
@@ -46,51 +52,59 @@ class LoginCoordinator: Coordinator {
         }
     }
     
-    override func finish() {
-        print("LOGIN COORDINATOR FINISHED")
+    override func finish() {}
+    
+    private func presentLoginViewController() {
+        let loginViewController: LoginVIewController = storyboard.instantiateViewController(identifier: "LoginVIewController")
+        loginViewController.navigationItem.setHidesBackButton(true, animated: true)
+        loginViewController.viewModel = loginViewModel
+        rootNavigationController.pushViewController(loginViewController, animated: true)
+    }
+    
+    private func presentRegistrationViewController() {
+        let registrationViewController: RegistrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
+        registrationViewController.navigationItem.setHidesBackButton(true, animated: true)
+        registrationViewController.viewModel = registrationViewModel
+        rootNavigationController.pushViewController(registrationViewController, animated: true)
+    }
+    
+    private func presentRecoveryPasswordViewController() {
+        let recoveryViewController: RecoveryPasswordViewController = storyboard.instantiateViewController(identifier: "RecoveryPasswordViewController")
+        recoveryViewController.navigationItem.setHidesBackButton(true, animated: true)
+        recoveryViewController.viewModel = recoveryViewModel
+        rootNavigationController.pushViewController(recoveryViewController, animated: true)
     }
 }
 
 
 extension LoginCoordinator: LoginViewModelDelegate {
     func loginSuccessfully() {
-        
+        let tabCoordinator = TabBarCoordinator(rootNavigationController: rootNavigationController)
+        tabCoordinator.start(allowsReturnToPreviousCoordinator: false)
     }
     
     func moveToRegistration() {
-        let registrationViewController: RegistrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
-        registrationViewController.viewModel = registrationViewModel
-        rootNavigationController.pushViewController(registrationViewController, animated: true)
+        presentRegistrationViewController()
     }
     
     func moveToRecoveryPassword() {
-        let recoveryViewController: RecoveryPasswordViewController = storyboard.instantiateViewController(identifier: "RecoveryPasswordViewController")
-        recoveryViewController.viewModel = recoveryViewModel
-        rootNavigationController.pushViewController(recoveryViewController, animated: true)
+        presentRecoveryPasswordViewController()
     }
     
 }
 
 extension LoginCoordinator: RegistrationViewModelDelegate {
     func registrationSuccessfully() {
-        
+        rootNavigationController.popToRootViewController(animated: true)
     }
     
     func moveToLoginFromRegistration() {
-        let loginViewController: LoginVIewController = storyboard.instantiateViewController(identifier: "LoginVIewController")
-        loginViewController.viewModel = loginViewModel
-        rootNavigationController.pushViewController(loginViewController, animated: true)
+        presentLoginViewController()
     }
-    
-  
 }
 
 extension LoginCoordinator: RecoveryPasswordViewModelDelegate {
-    
     func moveToLoginFromRecovery() {
-        let loginViewController: LoginVIewController = storyboard.instantiateViewController(identifier: "LoginVIewController")
-        loginViewController.viewModel = loginViewModel
+       presentLoginViewController()
     }
-    
-
 }

@@ -11,7 +11,7 @@ class Coordinator {
     
     private(set) var childCoordinators: [Coordinator] = []
     
-    func start(allowsReturnToPreviousCoordinator: Bool) {}
+    func start(allowsReturnToPreviousCoordinator: Bool = false) {}
     
     func finish() {}
     

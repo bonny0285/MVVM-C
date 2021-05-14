@@ -37,10 +37,36 @@
 		B44359362642982D006DC1AA /* NaplesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44359352642982D006DC1AA /* NaplesViewModel.swift */; };
 		B44359392642AAA0006DC1AA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44359382642AAA0006DC1AA /* BaseViewModel.swift */; };
 		B443593B2642AAAC006DC1AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443593A2642AAAC006DC1AA /* BaseViewController.swift */; };
+		B45A0540264E73160021E732 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45A053F264E73160021E732 /* TabBar.storyboard */; };
 		B4C5C88A2646CFF400D22C0A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C5C8892646CFF400D22C0A /* Login.storyboard */; };
 		B4C5C88F2646D04E00D22C0A /* LoginVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C88E2646D04E00D22C0A /* LoginVIewController.swift */; };
 		B4C5C8912646D09800D22C0A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8902646D09800D22C0A /* RegistrationViewController.swift */; };
 		B4C5C8932646D0CE00D22C0A /* RecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8922646D0CE00D22C0A /* RecoveryPasswordViewController.swift */; };
+		B4C5C8952649782C00D22C0A /* A.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C5C8942649782C00D22C0A /* A.storyboard */; };
+		B4C5C89D2649787A00D22C0A /* AOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C89C2649787A00D22C0A /* AOneViewController.swift */; };
+		B4C5C89F2649788900D22C0A /* ATwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C89E2649788900D22C0A /* ATwoViewController.swift */; };
+		B4C5C8A1264978A800D22C0A /* AThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8A0264978A800D22C0A /* AThreeViewController.swift */; };
+		B4C5C8A3264978B800D22C0A /* BOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8A2264978B800D22C0A /* BOneViewController.swift */; };
+		B4C5C8A5264978C400D22C0A /* BTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8A4264978C400D22C0A /* BTwoViewController.swift */; };
+		B4C5C8A7264978DD00D22C0A /* BThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8A6264978DD00D22C0A /* BThreeViewController.swift */; };
+		B4C5C8A9264978EF00D22C0A /* COneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8A8264978EF00D22C0A /* COneViewController.swift */; };
+		B4C5C8AB264978FB00D22C0A /* CTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8AA264978FB00D22C0A /* CTwoViewController.swift */; };
+		B4C5C8AD2649790700D22C0A /* CThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8AC2649790700D22C0A /* CThreeViewController.swift */; };
+		B4C5C8B12649795700D22C0A /* AOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8B02649795700D22C0A /* AOneViewModel.swift */; };
+		B4C5C8B32649796900D22C0A /* ATwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8B22649796900D22C0A /* ATwoViewModel.swift */; };
+		B4C5C8B52649797800D22C0A /* AThreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8B42649797800D22C0A /* AThreeViewModel.swift */; };
+		B4C5C8B72649799F00D22C0A /* BOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8B62649799F00D22C0A /* BOneViewModel.swift */; };
+		B4C5C8B9264979AE00D22C0A /* BTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8B8264979AE00D22C0A /* BTwoViewModel.swift */; };
+		B4C5C8BB264979E600D22C0A /* BThreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8BA264979E600D22C0A /* BThreeViewModel.swift */; };
+		B4C5C8BD264979FA00D22C0A /* COneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8BC264979FA00D22C0A /* COneViewModel.swift */; };
+		B4C5C8BF26497A0D00D22C0A /* CTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8BE26497A0D00D22C0A /* CTwoViewModel.swift */; };
+		B4C5C8C126497A2100D22C0A /* CThreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8C026497A2100D22C0A /* CThreeViewModel.swift */; };
+		B4C5C8C326497A3100D22C0A /* B.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C5C8C226497A3100D22C0A /* B.storyboard */; };
+		B4C5C8C526497A4500D22C0A /* C.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C5C8C426497A4500D22C0A /* C.storyboard */; };
+		B4C5C8C726497A9500D22C0A /* ACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8C626497A9500D22C0A /* ACoordinator.swift */; };
+		B4C5C8C926497AD300D22C0A /* BCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8C826497AD300D22C0A /* BCoordinator.swift */; };
+		B4C5C8CB26497AEE00D22C0A /* CCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8CA26497AEE00D22C0A /* CCoordinator.swift */; };
+		B4C5C8CE2649845200D22C0A /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C8CD2649845200D22C0A /* TabBarCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,10 +102,36 @@
 		B44359352642982D006DC1AA /* NaplesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaplesViewModel.swift; sourceTree = "<group>"; };
 		B44359382642AAA0006DC1AA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B443593A2642AAAC006DC1AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B45A053F264E73160021E732 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		B4C5C8892646CFF400D22C0A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B4C5C88E2646D04E00D22C0A /* LoginVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
 		B4C5C8902646D09800D22C0A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		B4C5C8922646D0CE00D22C0A /* RecoveryPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewController.swift; sourceTree = "<group>"; };
+		B4C5C8942649782C00D22C0A /* A.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = A.storyboard; sourceTree = "<group>"; };
+		B4C5C89C2649787A00D22C0A /* AOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOneViewController.swift; sourceTree = "<group>"; };
+		B4C5C89E2649788900D22C0A /* ATwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATwoViewController.swift; sourceTree = "<group>"; };
+		B4C5C8A0264978A800D22C0A /* AThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AThreeViewController.swift; sourceTree = "<group>"; };
+		B4C5C8A2264978B800D22C0A /* BOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOneViewController.swift; sourceTree = "<group>"; };
+		B4C5C8A4264978C400D22C0A /* BTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTwoViewController.swift; sourceTree = "<group>"; };
+		B4C5C8A6264978DD00D22C0A /* BThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BThreeViewController.swift; sourceTree = "<group>"; };
+		B4C5C8A8264978EF00D22C0A /* COneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COneViewController.swift; sourceTree = "<group>"; };
+		B4C5C8AA264978FB00D22C0A /* CTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTwoViewController.swift; sourceTree = "<group>"; };
+		B4C5C8AC2649790700D22C0A /* CThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CThreeViewController.swift; sourceTree = "<group>"; };
+		B4C5C8B02649795700D22C0A /* AOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOneViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8B22649796900D22C0A /* ATwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATwoViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8B42649797800D22C0A /* AThreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AThreeViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8B62649799F00D22C0A /* BOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOneViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8B8264979AE00D22C0A /* BTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTwoViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8BA264979E600D22C0A /* BThreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BThreeViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8BC264979FA00D22C0A /* COneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COneViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8BE26497A0D00D22C0A /* CTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTwoViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8C026497A2100D22C0A /* CThreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CThreeViewModel.swift; sourceTree = "<group>"; };
+		B4C5C8C226497A3100D22C0A /* B.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = B.storyboard; sourceTree = "<group>"; };
+		B4C5C8C426497A4500D22C0A /* C.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = C.storyboard; sourceTree = "<group>"; };
+		B4C5C8C626497A9500D22C0A /* ACoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACoordinator.swift; sourceTree = "<group>"; };
+		B4C5C8C826497AD300D22C0A /* BCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCoordinator.swift; sourceTree = "<group>"; };
+		B4C5C8CA26497AEE00D22C0A /* CCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCoordinator.swift; sourceTree = "<group>"; };
+		B4C5C8CD2649845200D22C0A /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +199,7 @@
 				B44358FA26427EBA006DC1AA /* SceneDelegate.swift */,
 				B44358F826427EBA006DC1AA /* AppDelegate.swift */,
 				B4C5C8852646CFBD00D22C0A /* Login */,
+				B4C5C8CC2649842700D22C0A /* TabBarCoordinator */,
 				B4C5C8862646CFCC00D22C0A /* A */,
 				B4C5C8872646CFD200D22C0A /* B */,
 				B4C5C8882646CFD800D22C0A /* C */,
@@ -275,6 +328,10 @@
 		B4C5C8862646CFCC00D22C0A /* A */ = {
 			isa = PBXGroup;
 			children = (
+				B4C5C8942649782C00D22C0A /* A.storyboard */,
+				B4C5C8C626497A9500D22C0A /* ACoordinator.swift */,
+				B4C5C8962649783300D22C0A /* ViewControllers */,
+				B4C5C8992649784F00D22C0A /* ViewModels */,
 			);
 			path = A;
 			sourceTree = "<group>";
@@ -282,6 +339,10 @@
 		B4C5C8872646CFD200D22C0A /* B */ = {
 			isa = PBXGroup;
 			children = (
+				B4C5C8C226497A3100D22C0A /* B.storyboard */,
+				B4C5C8C826497AD300D22C0A /* BCoordinator.swift */,
+				B4C5C8972649784400D22C0A /* ViewControllers */,
+				B4C5C89A2649785800D22C0A /* ViewModels */,
 			);
 			path = B;
 			sourceTree = "<group>";
@@ -289,6 +350,10 @@
 		B4C5C8882646CFD800D22C0A /* C */ = {
 			isa = PBXGroup;
 			children = (
+				B4C5C8C426497A4500D22C0A /* C.storyboard */,
+				B4C5C8CA26497AEE00D22C0A /* CCoordinator.swift */,
+				B4C5C8982649784800D22C0A /* ViewControllers */,
+				B4C5C89B2649785B00D22C0A /* ViewModels */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -301,6 +366,75 @@
 				B4C5C8922646D0CE00D22C0A /* RecoveryPasswordViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4C5C8962649783300D22C0A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5C89C2649787A00D22C0A /* AOneViewController.swift */,
+				B4C5C89E2649788900D22C0A /* ATwoViewController.swift */,
+				B4C5C8A0264978A800D22C0A /* AThreeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4C5C8972649784400D22C0A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5C8A2264978B800D22C0A /* BOneViewController.swift */,
+				B4C5C8A4264978C400D22C0A /* BTwoViewController.swift */,
+				B4C5C8A6264978DD00D22C0A /* BThreeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4C5C8982649784800D22C0A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5C8A8264978EF00D22C0A /* COneViewController.swift */,
+				B4C5C8AA264978FB00D22C0A /* CTwoViewController.swift */,
+				B4C5C8AC2649790700D22C0A /* CThreeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4C5C8992649784F00D22C0A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5C8B02649795700D22C0A /* AOneViewModel.swift */,
+				B4C5C8B22649796900D22C0A /* ATwoViewModel.swift */,
+				B4C5C8B42649797800D22C0A /* AThreeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B4C5C89A2649785800D22C0A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5C8B62649799F00D22C0A /* BOneViewModel.swift */,
+				B4C5C8B8264979AE00D22C0A /* BTwoViewModel.swift */,
+				B4C5C8BA264979E600D22C0A /* BThreeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B4C5C89B2649785B00D22C0A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5C8BC264979FA00D22C0A /* COneViewModel.swift */,
+				B4C5C8BE26497A0D00D22C0A /* CTwoViewModel.swift */,
+				B4C5C8C026497A2100D22C0A /* CThreeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B4C5C8CC2649842700D22C0A /* TabBarCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B45A053F264E73160021E732 /* TabBar.storyboard */,
+				B4C5C8CD2649845200D22C0A /* TabBarCoordinator.swift */,
+			);
+			path = TabBarCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,12 +494,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45A0540264E73160021E732 /* TabBar.storyboard in Resources */,
 				B443590526427EBB006DC1AA /* LaunchScreen.storyboard in Resources */,
 				B443590226427EBB006DC1AA /* Assets.xcassets in Resources */,
 				B4C5C88A2646CFF400D22C0A /* Login.storyboard in Resources */,
 				B443592026428CA6006DC1AA /* UK.storyboard in Resources */,
 				B443591E26428C9A006DC1AA /* Italy.storyboard in Resources */,
+				B4C5C8C326497A3100D22C0A /* B.storyboard in Resources */,
+				B4C5C8952649782C00D22C0A /* A.storyboard in Resources */,
 				B443590026427EBA006DC1AA /* Main.storyboard in Resources */,
+				B4C5C8C526497A4500D22C0A /* C.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,33 +514,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C5C8B72649799F00D22C0A /* BOneViewModel.swift in Sources */,
+				B4C5C8C126497A2100D22C0A /* CThreeViewModel.swift in Sources */,
+				B4C5C8BB264979E600D22C0A /* BThreeViewModel.swift in Sources */,
 				B443592426428CEE006DC1AA /* LondonViewController.swift in Sources */,
 				B443592626428D38006DC1AA /* RomeViewModel.swift in Sources */,
 				B4375AE72647302E00C57B36 /* CustomButton.swift in Sources */,
+				B4C5C8B9264979AE00D22C0A /* BTwoViewModel.swift in Sources */,
+				B4C5C8CB26497AEE00D22C0A /* CCoordinator.swift in Sources */,
 				B4C5C8932646D0CE00D22C0A /* RecoveryPasswordViewController.swift in Sources */,
 				B443593226429597006DC1AA /* NaplesViewController.swift in Sources */,
 				B4375AE22647287800C57B36 /* LoginCoordinator.swift in Sources */,
 				B443591C264287DE006DC1AA /* AirportViewModel.swift in Sources */,
+				B4C5C8BF26497A0D00D22C0A /* CTwoViewModel.swift in Sources */,
 				B4C5C88F2646D04E00D22C0A /* LoginVIewController.swift in Sources */,
 				B4375AD92647284100C57B36 /* LoginViewModel.swift in Sources */,
 				B443593B2642AAAC006DC1AA /* BaseViewController.swift in Sources */,
 				B4375ADF2647286800C57B36 /* RecoveryPasswordViewModel.swift in Sources */,
 				B44359152642803C006DC1AA /* AppCoordinator.swift in Sources */,
+				B4C5C8BD264979FA00D22C0A /* COneViewModel.swift in Sources */,
 				B44359392642AAA0006DC1AA /* BaseViewModel.swift in Sources */,
+				B4C5C8C926497AD300D22C0A /* BCoordinator.swift in Sources */,
 				B443592C26428F0A006DC1AA /* UKCoordinator.swift in Sources */,
 				B44359362642982D006DC1AA /* NaplesViewModel.swift in Sources */,
+				B4C5C89D2649787A00D22C0A /* AOneViewController.swift in Sources */,
 				B443592A26428EEC006DC1AA /* ItalyCoordinator.swift in Sources */,
+				B4C5C8A5264978C400D22C0A /* BTwoViewController.swift in Sources */,
+				B4C5C89F2649788900D22C0A /* ATwoViewController.swift in Sources */,
 				B44359112642801A006DC1AA /* AirportCoordinator.swift in Sources */,
+				B4C5C8CE2649845200D22C0A /* TabBarCoordinator.swift in Sources */,
 				B443592826428D5A006DC1AA /* LondonViewModel.swift in Sources */,
 				B44359302642954F006DC1AA /* MilanViewController.swift in Sources */,
 				B44358FD26427EBA006DC1AA /* AirportViewController.swift in Sources */,
+				B4C5C8B12649795700D22C0A /* AOneViewModel.swift in Sources */,
+				B4C5C8AB264978FB00D22C0A /* CTwoViewController.swift in Sources */,
+				B4C5C8A3264978B800D22C0A /* BOneViewController.swift in Sources */,
 				B4375B142647A37E00C57B36 /* User.swift in Sources */,
 				B44359132642802B006DC1AA /* Coordinator.swift in Sources */,
 				B44359342642981C006DC1AA /* MilanViewModel.swift in Sources */,
+				B4C5C8B32649796900D22C0A /* ATwoViewModel.swift in Sources */,
+				B4C5C8A9264978EF00D22C0A /* COneViewController.swift in Sources */,
 				B4375ADC2647285400C57B36 /* RegistrationViewModel.swift in Sources */,
+				B4C5C8A7264978DD00D22C0A /* BThreeViewController.swift in Sources */,
+				B4C5C8A1264978A800D22C0A /* AThreeViewController.swift in Sources */,
 				B443592226428CC0006DC1AA /* RomeViewController.swift in Sources */,
 				B4C5C8912646D09800D22C0A /* RegistrationViewController.swift in Sources */,
 				B44358F926427EBA006DC1AA /* AppDelegate.swift in Sources */,
+				B4C5C8B52649797800D22C0A /* AThreeViewModel.swift in Sources */,
+				B4C5C8C726497A9500D22C0A /* ACoordinator.swift in Sources */,
+				B4C5C8AD2649790700D22C0A /* CThreeViewController.swift in Sources */,
 				B44358FB26427EBA006DC1AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

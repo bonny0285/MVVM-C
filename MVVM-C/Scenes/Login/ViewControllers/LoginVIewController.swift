@@ -25,11 +25,16 @@ class LoginVIewController: BaseViewController {
         title = "Login"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     //MARK: - Methods
     
     //MARK: - Actions
     
     @IBAction func loginWasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.loginSuccessfully()
     }
     
     @IBAction func registrationWasPressed(_ sender: CustomButton) {
