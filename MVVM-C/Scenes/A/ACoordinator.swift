@@ -15,12 +15,16 @@ class ACoordinator: Coordinator {
     
     lazy var aOneViewModel: AOneViewModel = {
         let viewModel = AOneViewModel()
-       // viewModel.delegate = self
+        viewModel.delegate = self
         return viewModel
     }()
     
     init(rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
+//        super.init()
+//        let aOneViewController: AOneViewController = storyboard.instantiateViewController(identifier: "AOneViewController")
+//        aOneViewController.viewModel = aOneViewModel
+//        rootNavigationController.pushViewController(aOneViewController, animated: true)
     }
     
     override func start(allowsReturnToPreviousCoordinator: Bool) {
@@ -47,11 +51,29 @@ class ACoordinator: Coordinator {
     }
 }
 
+extension ACoordinator: AOneViewModelDelegate {
+    func moveToA2ViewController() {
+        print(#function)
+    }
+    
+    func moveToA3ViewController() {
+        print(#function)
+    }
+    
+    func moveToB1ViewController() {
+        print(#function)
+    }
+    
+    func moveToC1ViewController() {
+        print(#function)
+    }
+}
+
 extension ACoordinator {
     
-    func presentA2ViewController(_ navigationController: UINavigationController) {
+    func presentA2ViewController(_ navigationController: UITabBarController) {
         let controller: ATwoViewController = storyboard.instantiateViewController(identifier: "ATwoViewController")
-        navigationController.pushViewController(controller, animated: true)
+        navigationController.navigationController!.pushViewController(controller, animated: true)
     }
     
     func presentA3ViewController(_ navigationController: UINavigationController) {

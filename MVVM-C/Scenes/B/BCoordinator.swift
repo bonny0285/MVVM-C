@@ -18,12 +18,10 @@ class BCoordinator: Coordinator {
 //        return viewModel
 //    }()
     
-    init(rootNavigationController: UINavigationController, tabBarController: UITabBarController) {
+    init(rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
         super.init()
-        if returnRootViewController() == tabBarController.selectedViewController {
-            print("")
-        }
+     
     }
     
     override func start(allowsReturnToPreviousCoordinator: Bool) {
