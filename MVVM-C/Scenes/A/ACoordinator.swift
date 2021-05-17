@@ -24,19 +24,6 @@ class ACoordinator: Coordinator {
     }
     
     override func start(allowsReturnToPreviousCoordinator: Bool) {
-        instantiateFirstViewController(allowsReturnToPreviousCoordinator: allowsReturnToPreviousCoordinator)
-    }
-    
-    override func finish() {}
-    
-    func returnRootViewController() -> AOneViewController {
-        let aOneViewController: AOneViewController = storyboard.instantiateViewController(identifier: "AOneViewController")
-        //aOneViewController.viewModel = AOneViewModel()
-        aOneViewController.viewModel.delegate = self
-        return aOneViewController
-    }
-    
-    private func instantiateFirstViewController(allowsReturnToPreviousCoordinator: Bool) {
         let aOneViewController: AOneViewController = storyboard.instantiateViewController(identifier: "AOneViewController")
         aOneViewController.viewModel.delegate = self
         
@@ -47,47 +34,32 @@ class ACoordinator: Coordinator {
             rootNavigationController.setViewControllers([aOneViewController], animated: true)
         }
     }
+    
+    override func finish() {}
 }
 
 extension ACoordinator: AOneViewModelDelegate {
     func moveToA2ViewController() {
-        presentA2ViewController(rootNavigationController)
+        let controller: ATwoViewController = storyboard.instantiateViewController(identifier: "ATwoViewController")
+        rootNavigationController.pushViewController(controller, animated: true)
     }
     
     func moveToA3ViewController() {
-        presentA3ViewController(rootNavigationController)
+        let controller: AThreeViewController = storyboard.instantiateViewController(identifier: "AThreeViewController")
+        rootNavigationController.pushViewController(controller, animated: true)
     }
     
     func moveToB1ViewController() {
-        presentB1ViewController(rootNavigationController)
+        let bStoryboard = UIStoryboard(name: "B", bundle: Bundle.main)
+        let controller: BOneViewController = bStoryboard.instantiateViewController(identifier: "BOneViewController")
+        rootNavigationController.tabBarController?.tabBar.isHidden = true 
+        rootNavigationController.pushViewController(controller, animated: true)
     }
     
     func moveToC1ViewController() {
-        presentC1ViewController(rootNavigationController)
+        let cStoryboard = UIStoryboard(name: "C", bundle: Bundle.main)
+        let controller: COneViewController = cStoryboard.instantiateViewController(identifier: "COneViewController")
+        rootNavigationController.pushViewController(controller, animated: true)
     }
 }
 
-extension ACoordinator {
-    
-    func presentA2ViewController(_ navigationController: UINavigationController) {
-        let controller: ATwoViewController = storyboard.instantiateViewController(identifier: "ATwoViewController")
-        navigationController.pushViewController(controller, animated: true)
-    }
-    
-    func presentA3ViewController(_ navigationController: UINavigationController) {
-        let controller: AThreeViewController = storyboard.instantiateViewController(identifier: "AThreeViewController")
-        navigationController.pushViewController(controller, animated: true)
-    }
-    
-    func presentB1ViewController(_ navigationController: UINavigationController) {
-        let bStoryboard = UIStoryboard(name: "B", bundle: Bundle.main)
-        let controller: BOneViewController = bStoryboard.instantiateViewController(identifier: "BOneViewController")
-        navigationController.pushViewController(controller, animated: true)
-    }
-    
-    func presentC1ViewController(_ navigationController: UINavigationController) {
-        let cStoryboard = UIStoryboard(name: "C", bundle: Bundle.main)
-        let controller: COneViewController = cStoryboard.instantiateViewController(identifier: "COneViewController")
-        navigationController.pushViewController(controller, animated: true)
-    }
-}

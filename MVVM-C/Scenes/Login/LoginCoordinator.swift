@@ -13,23 +13,23 @@ class LoginCoordinator: Coordinator {
 
     let rootNavigationController: UINavigationController!
     
-    lazy var loginViewModel: LoginViewModel = {
-        let viewModel = LoginViewModel()
-        viewModel.delegate = self
-        return viewModel
-    }()
-    
-    lazy var registrationViewModel: RegistrationViewModel = {
-        let viewModel = RegistrationViewModel()
-        viewModel.delegate = self
-        return viewModel
-    }()
-    
-    lazy var recoveryViewModel: RecoveryPasswordViewModel = {
-        let viewModel = RecoveryPasswordViewModel()
-        viewModel.delegate = self
-        return viewModel
-    }()
+//    lazy var loginViewModel: LoginViewModel = {
+//        let viewModel = LoginViewModel()
+//        viewModel.delegate = self
+//        return viewModel
+//    }()
+//
+//    lazy var registrationViewModel: RegistrationViewModel = {
+//        let viewModel = RegistrationViewModel()
+//        viewModel.delegate = self
+//        return viewModel
+//    }()
+//
+//    lazy var recoveryViewModel: RecoveryPasswordViewModel = {
+//        let viewModel = RecoveryPasswordViewModel()
+//        viewModel.delegate = self
+//        return viewModel
+//    }()
     
     private(set) var storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
     
@@ -58,21 +58,21 @@ class LoginCoordinator: Coordinator {
     private func presentLoginViewController() {
         let loginViewController: LoginVIewController = storyboard.instantiateViewController(identifier: "LoginVIewController")
         loginViewController.navigationItem.setHidesBackButton(true, animated: true)
-        loginViewController.viewModel = loginViewModel
+        loginViewController.viewModel.delegate = self
         rootNavigationController.pushViewController(loginViewController, animated: true)
     }
     
     private func presentRegistrationViewController() {
         let registrationViewController: RegistrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
         registrationViewController.navigationItem.setHidesBackButton(true, animated: true)
-        registrationViewController.viewModel = registrationViewModel
+        registrationViewController.viewModel.delegate = self
         rootNavigationController.pushViewController(registrationViewController, animated: true)
     }
     
     private func presentRecoveryPasswordViewController() {
         let recoveryViewController: RecoveryPasswordViewController = storyboard.instantiateViewController(identifier: "RecoveryPasswordViewController")
         recoveryViewController.navigationItem.setHidesBackButton(true, animated: true)
-        recoveryViewController.viewModel = recoveryViewModel
+        recoveryViewController.viewModel.delegate = self
         rootNavigationController.pushViewController(recoveryViewController, animated: true)
     }
 }
@@ -81,6 +81,7 @@ class LoginCoordinator: Coordinator {
 extension LoginCoordinator: LoginViewModelDelegate {
     func loginSuccessfully() {
         let tabCoordinator = TabBarCoordinator(rootNavigationController: rootNavigationController)
+        addChildCoordinator(tabCoordinator)
         tabCoordinator.start(allowsReturnToPreviousCoordinator: false)
     }
     

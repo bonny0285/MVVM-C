@@ -13,6 +13,5 @@ protocol RegistrationViewModelDelegate: AnyObject {
 }
 
 class RegistrationViewModel: BaseViewModel {
-
     weak var delegate: RegistrationViewModelDelegate?
 }

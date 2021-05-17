@@ -15,5 +15,12 @@ protocol AOneViewModelDelegate: AnyObject {
 }
 
 class AOneViewModel: BaseViewModel {
-     var delegate: AOneViewModelDelegate?
+    weak var delegate: AOneViewModelDelegate? {
+        willSet {
+            print("Delegate on willSet is: \(String(describing: delegate))")
+        }
+        didSet {
+            print("Delegate on didSet is: \(String(describing: delegate))")
+        }
+    }
 }

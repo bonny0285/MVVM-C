@@ -12,6 +12,5 @@ protocol RecoveryPasswordViewModelDelegate: AnyObject {
 }
 
 class RecoveryPasswordViewModel: BaseViewModel {
-
     weak var delegate: RecoveryPasswordViewModelDelegate?
 }

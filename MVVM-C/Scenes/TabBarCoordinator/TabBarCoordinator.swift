@@ -18,6 +18,11 @@ class MyCustomTabBarController: UITabBarController, UITabBarControllerDelegate {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#function)
+    }
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selected Controller: \(viewController)")
     }
@@ -38,13 +43,13 @@ class TabBarCoordinator: Coordinator {
     var rootNavigationController: UINavigationController!
     
     var coordinatorA: ACoordinator!
-    var aNavigation: UINavigationController!
+    var aNavigation = UINavigationController()
     
     var coordinatorB: BCoordinator!
-    var bNavigation: UINavigationController!
+    var bNavigation = UINavigationController()
     
     var coordinatorC: CCoordinator!
-    var cNavigation: UINavigationController!
+    var cNavigation = UINavigationController()
     
     var viewControllerContainer: [UIViewController] = []
     
@@ -53,23 +58,19 @@ class TabBarCoordinator: Coordinator {
         rootNavigationController.isNavigationBarHidden = true
         
         tabBarController = UIStoryboard(name: "TabBar", bundle: Bundle.main).instantiateViewController(identifier: "MyCustomTabBarController")
-        
-        aNavigation = (tabBarController.viewControllers?[0] as! UINavigationController)
+
         coordinatorA = ACoordinator(rootNavigationController: aNavigation)
         coordinatorA.start(allowsReturnToPreviousCoordinator: false)
         aNavigation.tabBarItem = UITabBarItem(title: "A", image: nil, tag: 0)
         
-        bNavigation = (tabBarController.viewControllers?[1] as! UINavigationController)
         coordinatorB = BCoordinator(rootNavigationController: bNavigation)
         coordinatorB.start(allowsReturnToPreviousCoordinator: false)
         bNavigation.tabBarItem = UITabBarItem(title: "B", image: nil, tag: 1)
         
-        cNavigation = (tabBarController.viewControllers?[2] as! UINavigationController)
         coordinatorC = CCoordinator(rootNavigationController: cNavigation)
         coordinatorC.start(allowsReturnToPreviousCoordinator: false)
         cNavigation.tabBarItem = UITabBarItem(title: "C", image: nil, tag: 2)
         
-        tabBarController.viewControllers?.removeAll()
         tabBarController.viewControllers = [aNavigation, bNavigation, cNavigation]
         tabBarController.navigationController?.isNavigationBarHidden = true
     }
