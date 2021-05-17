@@ -9,22 +9,34 @@ import UIKit
 
 class COneViewController: BaseViewController {
 
+    //MARK: - Properties
+
+    var viewModel = COneViewModel()
+    
+    //MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //title = "C-1"
+        title = "C-1"
         tabBarController?.tabBarItem.title = "C"
     }
     
+    //MARK: - Actions
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func controllerC2WasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.moveToC2ViewController()
     }
-    */
-
+    
+    @IBAction func controllerC3WasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.moveTOC3ViewController()
+    }
+    
+    @IBAction func controllerA1WasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.moveToA1ViewController()
+    }
+    
+    @IBAction func controllerB1WasPressed(_ sender: CustomButton) {
+        viewModel.delegate?.moveToB1ViewCOntroller()
+    }
 }

@@ -28,6 +28,9 @@
                                         <state key="normal" title="Controller C-2">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="controllerC2WasPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XrS-3M-iyU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zf-e0-OHB" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="57" width="214" height="40"/>
@@ -38,6 +41,9 @@
                                         <state key="normal" title="Controller C-3">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="controllerC3WasPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZJB-x8-5so"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWP-mq-JUj" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="114" width="214" height="40"/>
@@ -48,6 +54,9 @@
                                         <state key="normal" title="Controller A-1">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="controllerA1WasPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="81E-MC-5vc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC7-LQ-d11" customClass="CustomButton" customModule="MVVM_C" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="171" width="214" height="40"/>
@@ -58,6 +67,9 @@
                                         <state key="normal" title="Controller B-1">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="controllerB1WasPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="94A-Pz-Vsa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

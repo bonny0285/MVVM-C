@@ -15,5 +15,5 @@ protocol AOneViewModelDelegate: AnyObject {
 }
 
 class AOneViewModel: BaseViewModel {
-    weak var delegate: AOneViewModelDelegate?
+     var delegate: AOneViewModelDelegate?
 }

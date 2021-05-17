@@ -13,18 +13,14 @@ class ACoordinator: Coordinator {
     
     private(set) var storyboard = UIStoryboard(name: "A", bundle: Bundle.main)
     
-    lazy var aOneViewModel: AOneViewModel = {
-        let viewModel = AOneViewModel()
-        viewModel.delegate = self
-        return viewModel
-    }()
+//    lazy var aOneViewModel: AOneViewModel = {
+//        let viewModel = AOneViewModel()
+//        viewModel.delegate = self
+//        return viewModel
+//    }()
     
     init(rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
-//        super.init()
-//        let aOneViewController: AOneViewController = storyboard.instantiateViewController(identifier: "AOneViewController")
-//        aOneViewController.viewModel = aOneViewModel
-//        rootNavigationController.pushViewController(aOneViewController, animated: true)
     }
     
     override func start(allowsReturnToPreviousCoordinator: Bool) {
@@ -35,16 +31,18 @@ class ACoordinator: Coordinator {
     
     func returnRootViewController() -> AOneViewController {
         let aOneViewController: AOneViewController = storyboard.instantiateViewController(identifier: "AOneViewController")
-        aOneViewController.viewModel = aOneViewModel
+        //aOneViewController.viewModel = AOneViewModel()
+        aOneViewController.viewModel.delegate = self
         return aOneViewController
     }
     
     private func instantiateFirstViewController(allowsReturnToPreviousCoordinator: Bool) {
         let aOneViewController: AOneViewController = storyboard.instantiateViewController(identifier: "AOneViewController")
-        aOneViewController.viewModel = aOneViewModel
+        aOneViewController.viewModel.delegate = self
         
         if allowsReturnToPreviousCoordinator {
             rootNavigationController.pushViewController(aOneViewController, animated: true)
+            
         } else {
             rootNavigationController.setViewControllers([aOneViewController], animated: true)
         }
@@ -53,27 +51,27 @@ class ACoordinator: Coordinator {
 
 extension ACoordinator: AOneViewModelDelegate {
     func moveToA2ViewController() {
-        print(#function)
+        presentA2ViewController(rootNavigationController)
     }
     
     func moveToA3ViewController() {
-        print(#function)
+        presentA3ViewController(rootNavigationController)
     }
     
     func moveToB1ViewController() {
-        print(#function)
+        presentB1ViewController(rootNavigationController)
     }
     
     func moveToC1ViewController() {
-        print(#function)
+        presentC1ViewController(rootNavigationController)
     }
 }
 
 extension ACoordinator {
     
-    func presentA2ViewController(_ navigationController: UITabBarController) {
+    func presentA2ViewController(_ navigationController: UINavigationController) {
         let controller: ATwoViewController = storyboard.instantiateViewController(identifier: "ATwoViewController")
-        navigationController.navigationController!.pushViewController(controller, animated: true)
+        navigationController.pushViewController(controller, animated: true)
     }
     
     func presentA3ViewController(_ navigationController: UINavigationController) {

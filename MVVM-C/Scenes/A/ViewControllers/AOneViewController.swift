@@ -17,8 +17,9 @@ class AOneViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.navigationController?.title = "A-1"
-        tabBarController?.tabBarItem.title = "A"
+        title = "A-1"
+//        tabBarController?.navigationController?.title = "A-1"
+//        tabBarController?.tabBarItem.title = "A"
     }
     
     //MARK: - Actions

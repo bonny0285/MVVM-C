@@ -43,7 +43,8 @@ class LoginCoordinator: Coordinator {
 
     override func start(allowsReturnToPreviousCoordinator: Bool) {
         let loginViewController: LoginVIewController = storyboard.instantiateViewController(identifier: "LoginVIewController")
-        loginViewController.viewModel = loginViewModel
+        //loginViewController.viewModel = loginViewModel
+        loginViewController.viewModel.delegate = self
         
         if allowsReturnToPreviousCoordinator {
             rootNavigationController.pushViewController(loginViewController, animated: true)
